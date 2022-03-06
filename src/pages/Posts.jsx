@@ -7,6 +7,7 @@ import PostFilter from '../components/PostFilter'
 import Loader from '../components/UI/Loader/loader'
 import PostList from '../components/PostList'
 import Pagin from '../components/UI/pagination/Pagination'
+import {Container} from "react-bootstrap";
 
 
 function Posts() {
@@ -59,6 +60,11 @@ function Posts() {
                 filter={filter}
                 setFilter={setFilter}
             />
+            <Container>
+                {postError &&
+                    <h1>произошла ошибка ${postError}</h1>
+                }
+            </Container>
             {isPostsLoading
                 ? <div style={{display:'flex',justifyContent:'center', marginTop:50}}><Loader/></div>
                 :<PostList posts={currentLig} title="Лиги"/>

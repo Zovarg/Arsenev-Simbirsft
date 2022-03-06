@@ -7,7 +7,7 @@ import PostFilter from '../components/PostFilter'
 import Loader from '../components/UI/Loader/loader'
 import Pagin from '../components/UI/pagination/Pagination'
 import TeamList from '../components/TeamList'
-import {Container} from '@mui/material'
+import {Container} from 'react-bootstrap'
 
 
 const Teams = () => {
