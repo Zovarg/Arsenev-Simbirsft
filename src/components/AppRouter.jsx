@@ -3,7 +3,7 @@ import {Route, Routes,Navigate} from "react-router-dom";
 import Posts from "../pages/Posts";
 import {routes} from "../router";
 import Error from "../pages/Error";
-
+//Настраиваем роутинг
 const AppRouter = () => {
     return (
 

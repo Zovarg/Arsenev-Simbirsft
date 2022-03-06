@@ -1,7 +1,7 @@
 import React from 'react';
 import {Col, Row} from "react-bootstrap";
 
-
+//Создание отдельных элементов матчей
 const LigaIdItem = (props) => {
 
     const dateArr=props.post.utcDate.split('T');

@@ -1,32 +1,33 @@
-import axios from "axios";
-export default class PostService{
-    static async getCompetitions(){
-        const Token = 'bb82ab2f47034cda9c517dc337746319'
-        const response=await axios.get('https://api.football-data.org/v2/competitions/',
+
+import axios from 'axios'
+export default class PostService {
+    /*Запрос для получения списка команд*/
+    static async getCompetitions (){
+        const Token = process.env.REACT_APP_API_KEY
+        const response = await axios.get('https://api.football-data.org/v2/competitions/',
             {
             headers: {
                 'X-Auth-Token': `${Token}`
                 }
             })
-        return response;
+        return response
     }
-
-
-    static async getTeams(){
-        const Token = 'bb82ab2f47034cda9c517dc337746319'
-        const response=await axios.get('https://api.football-data.org/v2/teams/',
+    /*Запрос для получения списка команд*/
+    static async getTeams (){
+        const Token = process.env.REACT_APP_API_KEY
+        const response = await axios.get('https://api.football-data.org/v2/teams/',
             {
                 headers: {
                     'X-Auth-Token': `${Token}`
                 }
             })
-        return response;
+        return response
     }
+    /*Запрос для получения списка матчей лиг*/
+    static async getCompetitionsId (id,dateStart,dateEnd){
 
-    static async getCompetitionsId(id,dateStart,dateEnd){
-
-        const Token = 'bb82ab2f47034cda9c517dc337746319'
-        const response=await axios.get(`http://api.football-data.org/v2/competitions/${id}/matches`,{
+        const Token = process.env.REACT_APP_API_KEY
+        const response = await axios.get(`http://api.football-data.org/v2/competitions/${id}/matches`,{
            params:{
                 dateFrom:dateStart,
                 dateTo:dateEnd
@@ -36,13 +37,14 @@ export default class PostService{
                 }
         })
 
-        return response;
+        return response
     }
 
+    /*Запрос для получения списка матчей команд*/
     static async getTeamsId(id,dateStart,dateEnd){
 
-        const Token = 'bb82ab2f47034cda9c517dc337746319'
-        const response=await axios.get(`http://api.football-data.org/v2/teams/${id}/matches`,{
+        const Token = process.env.REACT_APP_API_KEY
+        const response = await axios.get(`http://api.football-data.org/v2/teams/${id}/matches`,{
             params:{
                 dateFrom:dateStart,
                 dateTo:dateEnd
@@ -52,7 +54,7 @@ export default class PostService{
             }
         })
 
-        return response;
+        return response
     }
 
 }

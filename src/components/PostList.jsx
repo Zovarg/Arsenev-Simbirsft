@@ -2,6 +2,7 @@ import React from 'react';
 import PostItem from "./PostItem";
 import {Container} from "react-bootstrap";
 
+//Создаём общего список лиг с помощью PostItem
 const PostList = ({posts}) => {
     if(!posts.length){
         return (

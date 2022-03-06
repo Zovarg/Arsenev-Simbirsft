@@ -2,6 +2,7 @@ import React from 'react';
 import TeamItem from "./TeamItem";
 import {Container} from "react-bootstrap";
 
+//Создаём общего список команд с помощью TeamItem
 const TeamList = ({posts}) => {
     if(!posts.length){
         return (

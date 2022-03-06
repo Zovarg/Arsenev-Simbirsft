@@ -1,7 +1,7 @@
 import React from 'react';
 import MyInput from "./UI/input/MyInput";
 
-
+//Создаём input поиска и устанавливаем его состояния
 const PostFilter = ({filter, setFilter}) => {
     return (
         <div>

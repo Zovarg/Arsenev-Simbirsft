@@ -7,7 +7,7 @@ const Pagin = ({totalPages,page,changePage}) => {
     return (
         <Container>
             <div className={cl.page} >
-                {!!totalPages && (
+                {(totalPages!==0) && (totalPages!==-Infinity) && (
                   <Pagination
                     boundaryCount={1}
                     color="primary"

@@ -1,9 +1,9 @@
 import {useMemo} from "react";
-
+/*Хук для поисковой строки*/
 export const usePosts=(posts,query)=>{
 
-    const sortedAndSearchedPosts=useMemo(()=>{
+    const SearchedPosts=useMemo(()=>{
         return posts.filter(post => post.name.toLowerCase().includes(query.toLowerCase()))
     },[query, posts])
-    return sortedAndSearchedPosts;
+    return SearchedPosts;
 }

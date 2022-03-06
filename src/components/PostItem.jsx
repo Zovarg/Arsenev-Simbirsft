@@ -2,6 +2,7 @@ import React from 'react';
 import MyButton from "./UI/button/MyButton";
 import {useNavigate} from "react-router-dom";
 
+//Создание отдельных элементов(лиг)
 const PostItem = (props) => {
     const router= useNavigate()
     return (
