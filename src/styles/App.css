@@ -10,7 +10,7 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 10px;
 }
-@media (max-width: 425px){
+@media (max-width: 480px){
     .list{
         display:grid;
         grid-template-columns: 1fr 1fr;
@@ -39,7 +39,7 @@
     padding:20px;
     margin:1px;
 }
-/* Стиль списка */
+/* Стиль хлеб. крош.*/
 ul.breadcrumb {
     list-style: none;
 }

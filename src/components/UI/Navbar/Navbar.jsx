@@ -1,7 +1,7 @@
-import React from 'react';
-import {Link} from "react-router-dom";
-import classes from "./Navbar.module.css"
-import {Container, Nav, Navbar, } from "react-bootstrap";
+import React from 'react'
+import {Link} from 'react-router-dom'
+import classes from './Navbar.module.css'
+import {Container, Nav, Navbar, } from 'react-bootstrap'
 const Navibar = () => {
 
     return (
@@ -18,7 +18,7 @@ const Navibar = () => {
             </Container>
         </Navbar>
 
-    );
-};
+    )
+}
 
-export default Navibar;
+export default Navibar

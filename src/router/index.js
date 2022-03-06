@@ -1,7 +1,7 @@
-import Teams from "../pages/Teams";
-import Posts from "../pages/Posts";
-import PostIdPage from "../pages/PostIdPage";
-import TeamsIdPage from "../pages/TeamsIdPage";
+import Teams from '../pages/Teams'
+import Posts from '../pages/Posts'
+import PostIdPage from '../pages/PostIdPage'
+import TeamsIdPage from '../pages/TeamsIdPage'
 
 
 export const routes=[

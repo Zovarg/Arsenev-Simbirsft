@@ -1,6 +1,6 @@
-import React from 'react';
-import LigaIdItem from "./LigaIdItem";
-import {Container} from "react-bootstrap";
+import React from 'react'
+import LigaIdItem from './LigaIdItem'
+import {Container} from 'react-bootstrap'
 
 //Создаём общего список элементов с помощью LigaIdItem
 const LigaIdList = ({posts, title}) => {
@@ -20,7 +20,7 @@ const LigaIdList = ({posts, title}) => {
                 )}
             </Container>
         </div>
-    );
-};
+    )
+}
 
-export default LigaIdList;
+export default LigaIdList

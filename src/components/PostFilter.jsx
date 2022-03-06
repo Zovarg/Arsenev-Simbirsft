@@ -1,5 +1,5 @@
-import React from 'react';
-import MyInput from "./UI/input/MyInput";
+import React from 'react'
+import MyInput from './UI/input/MyInput'
 
 //Создаём input поиска и устанавливаем его состояния
 const PostFilter = ({filter, setFilter}) => {
@@ -11,7 +11,7 @@ const PostFilter = ({filter, setFilter}) => {
                 placeholder="Поиск..."
             />
         </div>
-    );
-};
+    )
+}
 
-export default PostFilter;
+export default PostFilter

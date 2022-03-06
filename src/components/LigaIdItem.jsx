@@ -1,10 +1,10 @@
-import React from 'react';
-import {Col, Row} from "react-bootstrap";
+import React from 'react'
+import {Col, Row} from 'react-bootstrap'
 
 //Создание отдельных элементов матчей
 const LigaIdItem = (props) => {
 
-    const dateArr=props.post.utcDate.split('T');
+    const dateArr=props.post.utcDate.split('T')
 
     return (
 
@@ -18,7 +18,7 @@ const LigaIdItem = (props) => {
                <Col xs="auto" sm={2} md={2}> {props.post.score.fullTime.homeTeam}:{props.post.score.fullTime.awayTeam} {props.post.score.extraTime.homeTeam}:{props.post.score.extraTime.awayTeam}  {props.post.score.penalties.homeTeam}:{props.post.score.penalties.awayTeam}</Col>
          </Row>
 
-    );
-};
+    )
+}
 
-export default LigaIdItem;
+export default LigaIdItem

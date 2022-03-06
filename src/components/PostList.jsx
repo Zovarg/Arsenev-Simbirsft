@@ -1,6 +1,6 @@
-import React from 'react';
-import PostItem from "./PostItem";
-import {Container} from "react-bootstrap";
+import React from 'react'
+import PostItem from './PostItem'
+import {Container} from 'react-bootstrap'
 
 //Создаём общего список лиг с помощью PostItem
 const PostList = ({posts}) => {
@@ -20,7 +20,7 @@ const PostList = ({posts}) => {
             )}
         </div>
         </Container>
-    );
-};
+    )
+}
 
-export default PostList;
+export default PostList

@@ -1,6 +1,6 @@
-import React from 'react';
-import TeamItem from "./TeamItem";
-import {Container} from "react-bootstrap";
+import React from 'react'
+import TeamItem from './TeamItem'
+import {Container} from 'react-bootstrap'
 
 //Создаём общего список команд с помощью TeamItem
 const TeamList = ({posts}) => {
@@ -22,7 +22,7 @@ const TeamList = ({posts}) => {
                 </div>
             </Container>
         </div>
-    );
-};
+    )
+}
 
-export default TeamList;
+export default TeamList

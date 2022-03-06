@@ -1,6 +1,6 @@
-import React from 'react';
-import MyButton from "./UI/button/MyButton";
-import {useNavigate} from "react-router-dom";
+import React from 'react'
+import MyButton from './UI/button/MyButton'
+import {useNavigate} from 'react-router-dom'
 
 //Создание отдельных элементов(команд)
 const TeamItem = (props) => {
@@ -16,7 +16,7 @@ const TeamItem = (props) => {
                     Открыть
                 </MyButton>
             </div>
-    );
-};
+    )
+}
 
-export default TeamItem;
+export default TeamItem

@@ -1,6 +1,6 @@
-import React from 'react';
-import {Container} from "react-bootstrap";
-import cl from "./MyDate.module.css"
+import React from 'react'
+import {Container} from 'react-bootstrap'
+import cl from './MyDate.module.css'
 const MyDate = ({date, setDate}) => {
     const sortedPosts=(sort)=>{
         setDate(sort)
@@ -23,7 +23,7 @@ const MyDate = ({date, setDate}) => {
                 </div>
             </div>
         </Container>
-    );
-};
+    )
+}
 
-export default MyDate;
+export default MyDate

@@ -1,35 +1,35 @@
-import React, {useEffect, useState} from 'react';
-import {usePosts} from "../hooks/usePosts";
-import {useFetching} from "../hooks/useFetching";
-import PostService from "../API/PostService";
-import {getPageCount} from "../utils/pages";
-import PostFilter from "../components/PostFilter";
-import Loader from "../components/UI/Loader/loader";
-import Pagin from "../components/UI/pagination/Pagination";
-import TeamList from "../components/TeamList";
-import {Container} from "@mui/material";
+import React, {useEffect, useState} from 'react'
+import {usePosts} from '../hooks/usePosts'
+import {useFetching} from '../hooks/useFetching'
+import PostService from '../API/PostService'
+import {getPageCount} from '../utils/pages'
+import PostFilter from '../components/PostFilter'
+import Loader from '../components/UI/Loader/loader'
+import Pagin from '../components/UI/pagination/Pagination'
+import TeamList from '../components/TeamList'
+import {Container} from '@mui/material'
 
 
 const Teams = () => {
-    const [teams, setTeams]=useState([]); //массив команд
+    const [teams, setTeams]=useState([]) //массив команд
     const [filter, setFilter]=useState({query:''}) //значение в поисковой строке
-    const [totalPages, setTotalPages]=useState(0); //Кол-во страниц
-    const [limit, setLimit]=useState(9); //Лимит элементов на одной странице
-    const [page, setPage]=useState(1); //Текущая страница
-    const SearchedTeams=usePosts(teams,filter.query); //Массив отфильрованных команд
+    const [totalPages, setTotalPages]=useState(0) //Кол-во страниц
+    const [limit, setLimit]=useState(9) //Лимит элементов на одной странице
+    const [page, setPage]=useState(1) //Текущая страница
+    const SearchedTeams=usePosts(teams,filter.query) //Массив отфильрованных команд
 
 
     /*Получаем список, устанавливаем его в массив, получаем общее кол-во элементов
     и пушим это кол-во в функцию для подсчёта страниц */
     const [fetchPosts,isPostsLoading,postError]=useFetching(async()=>{
-        const response=await PostService.getTeams();
+        const response=await PostService.getTeams()
         setTeams(response.data.teams)
         const totalCount=response.data.count
         setTotalPages(getPageCount(totalCount,limit))
     })
 
     useEffect(()=>{
-        fetchPosts();
+        fetchPosts()
     },[])
 
     //Изменяем кол-во страниц в пагинации при использовании поисковой строки (если изменилось кол-во элементов)
@@ -38,15 +38,15 @@ const Teams = () => {
     },[filter.query])
 
     //Считаем массив элементов на одной странице исходя из лимита
-    const lastLigIndex=page*limit;
-    const firstLigIndex=lastLigIndex-limit;
-    const currentLig=SearchedTeams.slice(firstLigIndex,lastLigIndex);
+    const lastLigIndex=page*limit
+    const firstLigIndex=lastLigIndex-limit
+    const currentLig=SearchedTeams.slice(firstLigIndex,lastLigIndex)
 
     //Получаем кол-во элементов после поискового запроса
     const pageCount=()=>{
         const count=SearchedTeams.map((searchPosts,index)=>index)
         const result= Math.max.apply(null, count)
-        return result;
+        return result
     }
 
     //Изменяем состояние активной страницы
@@ -76,7 +76,7 @@ const Teams = () => {
                 changePage={changePage}
                 totalPages={totalPages}/>
         </div>
-    );
-};
+    )
+}
 
-export default Teams;
+export default Teams

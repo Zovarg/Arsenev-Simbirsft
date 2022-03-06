@@ -1,7 +1,7 @@
-import React from 'react';
-import {Container} from "react-bootstrap";
-import cl from "./Pagination.module.css";
-import {Pagination} from "@mui/material";
+import React from 'react'
+import {Container} from 'react-bootstrap'
+import cl from './Pagination.module.css'
+import {Pagination} from '@mui/material'
 
 const Pagin = ({totalPages,page,changePage}) => {
     return (
@@ -9,7 +9,7 @@ const Pagin = ({totalPages,page,changePage}) => {
             <div className={cl.page} >
                 {(totalPages!==0) && (totalPages!==-Infinity) && (
                   <Pagination
-                    boundaryCount={1}
+                    boundaryCount={0}
                     color="primary"
                     variant="outlined"
                     shape="rounded"
@@ -20,7 +20,7 @@ const Pagin = ({totalPages,page,changePage}) => {
                 )}
             </div>
         </Container>
-    );
-};
+    )
+}
 
-export default Pagin;
+export default Pagin

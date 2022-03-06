@@ -1,5 +1,5 @@
-import React from 'react';
-import {Container} from "react-bootstrap";
+import React from 'react'
+import {Container} from 'react-bootstrap'
 
 const Error = () => {
     return (
@@ -10,7 +10,7 @@ const Error = () => {
                 </Container>
             </h2>
         </div>
-    );
-};
+    )
+}
 
-export default Error;
+export default Error

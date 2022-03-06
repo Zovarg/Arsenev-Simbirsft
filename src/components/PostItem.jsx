@@ -1,6 +1,6 @@
-import React from 'react';
-import MyButton from "./UI/button/MyButton";
-import {useNavigate} from "react-router-dom";
+import React from 'react'
+import MyButton from './UI/button/MyButton'
+import {useNavigate} from 'react-router-dom'
 
 //Создание отдельных элементов(лиг)
 const PostItem = (props) => {
@@ -15,7 +15,7 @@ const PostItem = (props) => {
                         Открыть
                     </MyButton>
                 </div>
-    );
-};
+    )
+}
 
-export default PostItem;
+export default PostItem

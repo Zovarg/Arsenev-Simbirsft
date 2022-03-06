@@ -1,7 +1,7 @@
-import React from 'react';
-import classes from './MyInput.module.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import {Container, InputGroup} from "react-bootstrap";
+import React from 'react'
+import classes from './MyInput.module.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import {Container, InputGroup} from 'react-bootstrap'
 const MyInput = (props) => {
     return (
         <InputGroup className="mb-3">
@@ -14,7 +14,7 @@ const MyInput = (props) => {
 
 
 
-    );
+    )
 }
 
-export default MyInput;
+export default MyInput
